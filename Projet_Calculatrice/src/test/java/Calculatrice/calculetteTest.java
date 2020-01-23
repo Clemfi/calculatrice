@@ -3,13 +3,12 @@ package Calculatrice;
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.condition.EnabledOnJre;
-import org.junit.jupiter.api.condition.JRE;
 
 
 public class calculetteTest {
@@ -28,7 +27,7 @@ public class calculetteTest {
 		}
 	}
 	
-	@AfterEach
+	@Before
 	public void space() {
 		System.out.println("\n");
 	}
@@ -45,17 +44,20 @@ public class calculetteTest {
 	{
 		maCalculette = new calculette();
 		assertEquals(2, maCalculette.soustraction(5,3),"Opération de soustraction");
+		System.out.println("testSoustraction is good !");
 	}
 	
 	@Test
 	public void testMultiplication() 
 	{
 		assertEquals(15, maCalculette.multiplication(3,5),"Opération de multiplication");
+		System.out.println("testMultiplication is good !");
 	}
 	
 	@Test
 	public void testDivision() 
 	{
 		assertEquals(2, maCalculette.division(10,5),"Opération dde division");
+		System.out.println("testDivision is good !");
 	}
 }
