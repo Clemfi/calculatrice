@@ -20,30 +20,24 @@ public class calculetteTest {
 	@Test
 	void testAddition() 
 	{
-		assertEquals(4, maCalculette.addition(3,1),"Opération d'addition");
+		assertEquals(4, maCalculette.addition(3,5),"Opération d'addition");
 	}
 	
 	@Test
 	void testSoustraction() 
 	{
-		double expected = 4;
-		double actual = maCalculette.soustraction(3,1);
-		assertEquals(expected, actual,"Opération d'addition");
+		assertEquals(4, maCalculette.soustraction(3,5),"Opération de soustraction");
 	}
 	
 	@Test
 	void testMultiplication() 
 	{
-		double expected = 4;
-		double actual = maCalculette.multiplication(3,1);
-		assertEquals(expected, actual,"Opération d'addition");
+		assertEquals(4, maCalculette.multiplication(3,5),"Opération de multiplication");
 	}
 	
 	@Test
 	void testDivision() 
 	{
-		double expected = 4;
-		double actual = maCalculette.division(3,1);
-		assertEquals(expected, actual,"Opération d'addition");
+		assertEquals(4, maCalculette.division(3,5),"Opération dde division");
 	}
 }
