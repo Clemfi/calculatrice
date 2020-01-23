@@ -4,10 +4,7 @@
   <artifactId>Projet_Calculatrice</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Calculatrice</name>
-  <description>Frédéric Lamagdelaine -  Jordan Boisseau - Clément Finck</description>
-
-  
-<properties>
+  <description>Frédéric Lamagdelaine -  Jordan Boisseau - Clément Finck</description><properties>
 	<maven.compiler.target>11</maven.compiler.target>
 	<maven.compiler.source>11</maven.compiler.source>
 	<junit.jupiter.version>5.4.0</junit.jupiter.version>
