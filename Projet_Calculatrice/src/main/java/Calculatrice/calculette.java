@@ -26,7 +26,7 @@ public class calculette extends JFrame {
   private String operateur = "";
   
   public calculette(){
-    this.setSize(240, 260);
+    this.setSize(300, 300);
     this.setTitle("Calculette");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setLocationRelativeTo(null);
