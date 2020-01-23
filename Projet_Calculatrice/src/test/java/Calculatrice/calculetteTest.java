@@ -8,44 +8,42 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.condition.EnabledOnJre;
 import org.junit.jupiter.api.condition.JRE;
 
-import CalculatriceSimple.test;
 
 public class calculetteTest {
 
-	calculette macalculette;
+	calculette maCalculette;
 	@BeforeEach
 	void ini() {
-		macalculette = new calculette();
+		maCalculette = new calculette();
 	}
 	
 	@Test
-	@EnabledOnJre(JRE.JAVA_15)
-	
-	void testaddition() 
+	void testAddition() 
 	{
-		double expected = 0;
-		double actual = macalculette.addition(3,1);
+		assertEquals(4, maCalculette.addition(3,1),"Opération d'addition");
+	}
+	
+	@Test
+	void testSoustraction() 
+	{
+		double expected = 4;
+		double actual = maCalculette.soustraction(3,1);
 		assertEquals(expected, actual,"Opération d'addition");
 	}
 	
-	void testsoustraction() 
+	@Test
+	void testMultiplication() 
 	{
 		double expected = 4;
-		double actual = macalculette.soustraction(3,1);
+		double actual = maCalculette.multiplication(3,1);
 		assertEquals(expected, actual,"Opération d'addition");
 	}
 	
-	void testmultiplication() 
+	@Test
+	void testDivision() 
 	{
 		double expected = 4;
-		double actual = macalculette.multiplication(3,1);
-		assertEquals(expected, actual,"Opération d'addition");
-	}
-	
-	void testdivision() 
-	{
-		double expected = 4;
-		double actual = macalculette.division(3,1);
+		double actual = maCalculette.division(3,1);
 		assertEquals(expected, actual,"Opération d'addition");
 	}
 }
