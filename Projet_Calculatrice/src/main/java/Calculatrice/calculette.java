@@ -109,31 +109,47 @@ public class calculette extends JFrame {
   //Méthode permettant d'effectuer un calcul selon l'opérateur sélectionné
   private void calcul(){
     if(operateur.equals("+")){
-      chiffre1 = chiffre1 + 
-            Double.valueOf(ecran.getText()).doubleValue();
+    	chiffre1 = addition(chiffre1, Double.valueOf(ecran.getText()).doubleValue());
       ecran.setText(String.valueOf(chiffre1));
     }
     if(operateur.equals("-")){
-      chiffre1 = chiffre1 - 
-            Double.valueOf(ecran.getText()).doubleValue();
-      ecran.setText(String.valueOf(chiffre1));
+    	chiffre1 = soustraction(chiffre1, Double.valueOf(ecran.getText()).doubleValue());
+        ecran.setText(String.valueOf(chiffre1));
     }          
     if(operateur.equals("*")){
-      chiffre1 = chiffre1 * 
-            Double.valueOf(ecran.getText()).doubleValue();
-      ecran.setText(String.valueOf(chiffre1));
+    	chiffre1 = multiplication(chiffre1, Double.valueOf(ecran.getText()).doubleValue());
+        ecran.setText(String.valueOf(chiffre1));
     }     
     if(operateur.equals("/")){
       try{
-        chiffre1 = chiffre1 / 
-              Double.valueOf(ecran.getText()).doubleValue();
-        ecran.setText(String.valueOf(chiffre1));
+    	  chiffre1 = division(chiffre1, Double.valueOf(ecran.getText()).doubleValue());
+          ecran.setText(String.valueOf(chiffre1));
       } catch(ArithmeticException e) {
         ecran.setText("0");
       }
     }
   }
 
+  double addition(double x, double y){
+	  double res = x + y;
+	  return res;
+  }
+  
+  double soustraction(double x, double y){
+	  double res = x - y;
+	  return res;
+  }
+  
+  double multiplication(double x, double y){
+	  double res = x * y;
+	  return res;
+  }
+  
+  double division(double x, double y){
+	  double res = x / y;
+	  return res;
+  }
+  
   //Listener utilisé pour les chiffres
   //Permet de stocker les chiffres et de les afficher
   class ChiffreListener implements ActionListener {

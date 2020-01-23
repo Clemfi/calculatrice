@@ -10,7 +10,7 @@ import org.junit.jupiter.api.condition.JRE;
 
 
 public class calculetteTest {
-/*
+
 	calculette maCalculette;
 	@BeforeEach
 	void ini() {
@@ -45,5 +45,5 @@ public class calculetteTest {
 		double expected = 4;
 		double actual = maCalculette.division(3,1);
 		assertEquals(expected, actual,"Opération d'addition");
-	}*/
+	}
 }
