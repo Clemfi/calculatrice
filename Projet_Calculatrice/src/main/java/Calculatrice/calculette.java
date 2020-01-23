@@ -129,6 +129,28 @@ public class calculette extends JFrame {
       }
     }
   }
+  
+  String calculOperation(int a, int b, String operateur){
+	  String value = "";
+	    if(operateur.equals("+")){
+	      value = String.valueOf(a + b);
+	    }
+	    if(operateur.equals("-")){
+	    	value = String.valueOf(a - b);
+	    }          
+	    if(operateur.equals("*")){
+	    	value = String.valueOf(a * b);
+	    }     
+	    if(operateur.equals("/")){
+	      try{
+	    	  value = String.valueOf(a / b);
+	      } catch(ArithmeticException e) {
+	        value = "0";
+	      }
+	    }
+	    
+	    return value;
+	  }
 
   double addition(double x, double y){
 	  double res = x + y;

@@ -2,7 +2,6 @@ package Calculatrice;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -80,6 +79,12 @@ class CalculetteTest {
 	{
 		assertEquals(2, maCalculette.division(10,5),"Opération dde division");
 		System.out.println("testDivision is good !");
+	}
+	
+	@Test
+	public void testCalcul() {
+		assertEquals("6", maCalculette.calculOperation(3, 3, "+"));
+		System.out.println("test result displayed on the screen is good !");
 	}
 
 }
