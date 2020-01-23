@@ -49,37 +49,37 @@ class CalculetteTest {
 	@Test
 	public void testAddition() 
 	{
-		assertAll(()-> assertEquals(8, maCalculette.addition(3,5),"Opération de addition"),
-				()-> assertEquals(1, maCalculette.addition(3,5),"Opération de addition fail")
-				);
-		System.out.println("testAddition is done !");
+		assertEquals(8, maCalculette.addition(3,5));
+		System.out.println("testAddition is good !");
 	}
 	
 	@Test
 	public void testSoustraction() 
 	{
-		assertAll(()-> assertEquals(2, maCalculette.soustraction(5,3),"Opération de soustraction"),
-				()-> assertEquals(1, maCalculette.soustraction(3,5),"Opération de soustraction fail")
-				);
-		System.out.println("testSoustraction is done !");
+		assertEquals(2, maCalculette.soustraction(5,3),"Opération de soustraction");
+		System.out.println("testSoustraction is good !");
+	}
+	
+	@Test
+	public void testSoustractionFail() 
+	{
+		
+		assertEquals(2, maCalculette.soustraction(18,3),"Opération de soustraction");
+		System.out.println("testSoustraction is fail !");
 	}
 	
 	@Test
 	public void testMultiplication() 
 	{
-		assertAll(()-> assertEquals(15, maCalculette.multiplication(3,5),"Opération de multiplication"),
-				()-> assertEquals(12, maCalculette.multiplication(3,5),"Opération de multiplication fail")
-				);
-		System.out.println("testMultiplication is done !");
+		assertEquals(15, maCalculette.multiplication(3,5),"Opération de multiplication");
+		System.out.println("testMultiplication is good !");
 	}
 	
 	@Test
 	public void testDivision() 
 	{
-		assertAll(()-> assertEquals(2, maCalculette.division(10,5),"Opération dde division"),
-				()-> assertEquals(12, maCalculette.division(10,2),"Opération de division fail")
-				);
-		System.out.println("testDivision is done !");
+		assertEquals(2, maCalculette.division(10,5),"Opération dde division");
+		System.out.println("testDivision is good !");
 	}
 
 }
