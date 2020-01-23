@@ -136,8 +136,7 @@ public class calculette extends JFrame {
   }
   
   double soustraction(double x, double y){
-	  double res = x - y;
-	  return res;
+	  return x - y;
   }
   
   double multiplication(double x, double y){
