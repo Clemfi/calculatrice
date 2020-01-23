@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.condition.EnabledOnJre;
 import org.junit.jupiter.api.condition.JRE;
@@ -12,9 +13,15 @@ import org.junit.jupiter.api.condition.JRE;
 public class calculetteTest {
 
 	calculette maCalculette;
+	
 	@BeforeEach
 	void ini() {
 		maCalculette = new calculette();
+	}
+	
+	@AfterEach
+	void space() {
+		System.out.println("\n");
 	}
 	
 	@Test
