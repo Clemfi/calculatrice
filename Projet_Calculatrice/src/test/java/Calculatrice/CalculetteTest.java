@@ -2,6 +2,8 @@ package Calculatrice;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.awt.Color;
+
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -49,20 +51,19 @@ class CalculetteTest {
 	public void testAddition() 
 	{
 		assertEquals(8, maCalculette.addition(3,5));
-		System.out.println("testAddition is good !");
+		System.out.println("testAddition is done !");
 	}
 	
 	@Test
 	public void testSoustraction() 
 	{
 		assertEquals(2, maCalculette.soustraction(5,3),"Opération de soustraction");
-		System.out.println("testSoustraction is good !");
+		System.out.println("testSoustraction is done !");
 	}
 	
 	@Test
 	public void testSoustractionFail() 
-	{
-		
+	{		
 		assertEquals(2, maCalculette.soustraction(18,3),"Opération de soustraction");
 		System.out.println("testSoustraction is fail !");
 	}
@@ -71,20 +72,32 @@ class CalculetteTest {
 	public void testMultiplication() 
 	{
 		assertEquals(15, maCalculette.multiplication(3,5),"Opération de multiplication");
-		System.out.println("testMultiplication is good !");
+		System.out.println("testMultiplication is done !");
 	}
 	
 	@Test
 	public void testDivision() 
 	{
 		assertEquals(2, maCalculette.division(10,5),"Opération dde division");
-		System.out.println("testDivision is good !");
+		System.out.println("testDivision is done !");
 	}
 	
 	@Test
 	public void testCalcul() {
 		assertEquals("6", maCalculette.calculOperation(3, 3, "+"));
-		System.out.println("test result displayed on the screen is good !");
+		System.out.println("Test result displayed on the screen is done !");
+	}
+	
+	@Test
+	public void testEcran() {
+		assertEquals("0",maCalculette.getJlabel().getText());
+		System.out.println("Test text from calculette's label done ! ");
+	}
+	
+	@Test
+	public void testColorJLabel() {
+		assertEquals(Color.BLUE, maCalculette.getJlabelColor());
+		System.out.println("Test JLabel's color is done !");
 	}
 
 }

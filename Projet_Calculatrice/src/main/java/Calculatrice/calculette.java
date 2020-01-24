@@ -24,6 +24,15 @@ public class calculette extends JFrame {
   private double chiffre1;
   private boolean clicOperateur = false, update = false;
   private String operateur = "";
+  private Color jLabelColor = new Color(Color.white.getBlue());
+  
+  public JLabel getJlabel() {
+	  return ecran;
+  }
+  
+  public Color getJlabelColor() {
+	  return jLabelColor;
+  }
   
   public calculette(){
     this.setSize(300, 300);
@@ -100,7 +109,7 @@ public class calculette extends JFrame {
       }
     }
     panEcran.add(ecran);
-    panEcran.setBorder(BorderFactory.createLineBorder(Color.black));
+    panEcran.setBorder(BorderFactory.createLineBorder(jLabelColor));
     container.add(panEcran, BorderLayout.NORTH);
     container.add(chiffre, BorderLayout.CENTER);
     container.add(operateur, BorderLayout.EAST);
